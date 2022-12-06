@@ -4,7 +4,7 @@ import random
 import numpy as np
 
 
-TOKEN = 'MTA0NDYxODk2MTg4ODc1NTc2NA.GGIRu1.GCbX_VS4BUpnFJfxQn2udVnkk6NaQxbms-VfIw' ### 내 디스코드 봇의 토큰 값
+TOKEN = 'bot_token' ### 내 디스코드 봇의 토큰 값
 
 intents = discord.Intents.all()
 
