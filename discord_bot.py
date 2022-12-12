@@ -8,7 +8,7 @@ import youtube_dl
 
 
 
-TOKEN = 'bot token' ### 내 디스코드 봇의 토큰 값
+TOKEN = 'MTA1MTU1OTA2MTM3MzU4NzU4Nw.Gin5Ml.V8xQ4lXgJ06Bv3Yk3D0tLIs1Ta7iFUo1p-CY7A' ### 내 디스코드 봇의 토큰 값
 
 intents = discord.Intents.default()
 
@@ -56,7 +56,7 @@ def rollADice():
     return "you  win! your number is " + str(a) +" my number is " + str(b)
   elif a==b:
     return "Draw! your number is " + str(a) +" my number is " + str(b)
-  elif a< b:
+  else:
     return "you lose! your number is " + str(b) +" my number is " + str(b)
 
 
@@ -71,25 +71,25 @@ def rollADice():
 
 @bot.event
 async def on_message(message): ### 명령어를 입력하면 다음 행동이 실행
-  if message.content == "!안녕":
+  if message.content == "안녕":
     await message.channel.send("Hello")
 
-  if message.content == "!잘가":
+  if message.content == "잘가":
     await message.channel.send("bye see you later")
 
-  if message.content ==  "!you good?":
+  if message.content ==  "you good?":
     await message.channel.send("I'm good")
     
   ### 봇의 정보를 알려주는 함수
   ### message.author, message.author.mention -> 현재 채널에 있는 봇의 정보와 채널 주인의 정보 알려줌
-  if message.content ==  "!봇정보":
+  if message.content ==  "봇정보":
     await message.channel.send("{} | {}, hello".format(message.author, message.author.mention))
 
     
   ### 봇이 사진 파일을 업로드해주는 함수 
   ### 지금 이파일(discord_bot.py)과 같은 파일(bot_code)안에 사진이 있어야함
-  ### !사진 사진파일이름 을 입력
-  if message.content.startswith("!사진"): 
+  ### 사진 사진파일이름 을 입력
+  if message.content.startswith("사진"): 
     pic = message.content.split(" ")[1]
     await message.channel.send(file = discord.File(pic))
 
